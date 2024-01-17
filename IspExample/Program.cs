@@ -10,7 +10,7 @@ namespace IspExample
     {
         static void Main(string[] args)
         {
-            var driver = new Driver(new Car());
+            var driver = new Driver(new LightTank());
             driver.Drive();
         }
     }
@@ -44,10 +44,13 @@ namespace IspExample
             Console.WriteLine("Truck is running...");
         }
     }
-    interface ITank
+    interface IWeapon
     {
         void Fire();
-        void Run();
+    }
+    interface ITank:IWeapon,IVehicle
+    {
+       
     }
     class LightTank:ITank
     {
