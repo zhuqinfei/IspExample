@@ -1,0 +1,7 @@
+D:\c#练习项目\IspExample\IspExample2\bin\Debug\IspExample2.exe.config
+D:\c#练习项目\IspExample\IspExample2\bin\Debug\IspExample2.exe
+D:\c#练习项目\IspExample\IspExample2\bin\Debug\IspExample2.pdb
+D:\c#练习项目\IspExample\IspExample2\obj\Debug\IspExample2.csproj.AssemblyReference.cache
+D:\c#练习项目\IspExample\IspExample2\obj\Debug\IspExample2.csproj.CoreCompileInputs.cache
+D:\c#练习项目\IspExample\IspExample2\obj\Debug\IspExample2.exe
+D:\c#练习项目\IspExample\IspExample2\obj\Debug\IspExample2.pdb
