@@ -10,8 +10,12 @@ namespace IspExample3
     {
         static void Main(string[] args)
         {
-            var wk = new WarmKiller();
-            //wk.Kill(); 这个时候就访问不了这个杀手功能了
+            //当给这个杀手任务，也就是杀手类时候，才能访问这个功能，这就是显式接口实现
+            IKiller killer = new WarmKiller();
+            killer.Kill();
+            //这里要进行类型转换才能访问Love方法
+            //var wk = killer as IGentleman; //方法1
+            var wk = (IGentleman)killer;  //方法2
             wk.Love();
         } 
     }
