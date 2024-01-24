@@ -11,9 +11,7 @@ namespace IspExample3
         static void Main(string[] args)
         {
             var wk = new WarmKiller();
-            //这样杀手功能就能大家都能看到，不是我们想要的，我们要隐藏杀手功能，
-            //当给杀手任务时候才访问这个功能
-            wk.Kill();
+            //wk.Kill(); 这个时候就访问不了这个杀手功能了
             wk.Love();
         } 
     }
@@ -31,7 +29,7 @@ namespace IspExample3
         {
             Console.WriteLine("Let me kill the enemy...");
         }
-        public void Kill()
+         void IKiller.Kill()
         {
             Console.WriteLine("I will love you for ever...");
         }
