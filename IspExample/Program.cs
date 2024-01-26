@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,8 +11,14 @@ namespace IspExample
     {
         static void Main(string[] args)
         {
-            var driver = new Driver(new LightTank());
-            driver.Drive();
+            ITank tank = new HeavyTank();
+            //==========华丽的分割线==============
+            var t = tank.GetType();
+            object o = Activator.CreateInstance(t);
+            MethodInfo fireMi = t.GetMethod("Fire");
+            MethodInfo runMi = t.GetMethod("Run");
+            fireMi.Invoke(o, null);
+            runMi.Invoke(o, null);
         }
     }
     class Driver
