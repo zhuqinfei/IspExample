@@ -15,11 +15,12 @@ namespace IspExample
             //需要安装程序包DependencyInjection;
             var sc = new ServiceCollection();
             sc.AddScoped(typeof(ITank), typeof(HeavyTank));
+            sc.AddScoped(typeof(IVehicle), typeof(Car));
+            sc.AddScoped<Driver>();
             var sp = sc.BuildServiceProvider();
             //============华丽的分割线==============
-            ITank tank = sp.GetService<ITank>();
-            tank.Fire();
-            tank.Run();
+            var driver = sp.GetService<Driver>();
+            driver.Drive();
         }
     }
 
