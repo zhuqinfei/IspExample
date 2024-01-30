@@ -5,3 +5,14 @@ D:\c#练习项目\IspExample\IspExample\obj\Debug\IspExample.csproj.AssemblyRefe
 D:\c#练习项目\IspExample\IspExample\obj\Debug\IspExample.csproj.CoreCompileInputs.cache
 D:\c#练习项目\IspExample\IspExample\obj\Debug\IspExample.exe
 D:\c#练习项目\IspExample\IspExample\obj\Debug\IspExample.pdb
+D:\c#练习项目\IspExample\IspExample\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\c#练习项目\IspExample\IspExample\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\c#练习项目\IspExample\IspExample\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\c#练习项目\IspExample\IspExample\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\c#练习项目\IspExample\IspExample\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\c#练习项目\IspExample\IspExample\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\c#练习项目\IspExample\IspExample\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\c#练习项目\IspExample\IspExample\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\c#练习项目\IspExample\IspExample\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\c#练习项目\IspExample\IspExample\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\c#练习项目\IspExample\IspExample\obj\Debug\IspExample.csproj.CopyComplete

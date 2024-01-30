@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -11,16 +12,17 @@ namespace IspExample
     {
         static void Main(string[] args)
         {
-            ITank tank = new HeavyTank();
-            //==========华丽的分割线==============
-            var t = tank.GetType();
-            object o = Activator.CreateInstance(t);
-            MethodInfo fireMi = t.GetMethod("Fire");
-            MethodInfo runMi = t.GetMethod("Run");
-            fireMi.Invoke(o, null);
-            runMi.Invoke(o, null);
+            //需要安装程序包DependencyInjection;
+            var sc = new ServiceCollection();
+            sc.AddScoped(typeof(ITank), typeof(HeavyTank));
+            var sp = sc.BuildServiceProvider();
+            //============华丽的分割线==============
+            ITank tank = sp.GetService<ITank>();
+            tank.Fire();
+            tank.Run();
         }
     }
+
     class Driver
     {
         private IVehicle _vehicle;
@@ -37,14 +39,14 @@ namespace IspExample
     {
         void Run();
     }
-    class Car:IVehicle
+    class Car : IVehicle
     {
         public void Run()
         {
             Console.WriteLine("Car is running...");
         }
     }
-    class Truck:IVehicle
+    class Truck : IVehicle
     {
         public void Run()
         {
@@ -55,13 +57,13 @@ namespace IspExample
     {
         void Fire();
     }
-    interface ITank:IWeapon,IVehicle
+    interface ITank : IWeapon, IVehicle
     {
-       
+
     }
-    class LightTank:ITank
+    class LightTank : ITank
     {
-        public void Fire() 
+        public void Fire()
         {
             Console.WriteLine("Boom!");
         }
